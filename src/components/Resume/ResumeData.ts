@@ -11,7 +11,7 @@ export const ResumeData : simpleProps[] =[
   {id:3,
     text: "Experience"
   },
-  {id:4,
-    text: "Achievements"
-  },
+  // {id:4,
+  //   text: "Achievements"
+  // },
 ]

@@ -1,53 +1,33 @@
-import { projectOne, projectTwo, projectThree } from "../../assets/index";
+import { projectOne, projectTwo, projectThree, Screenshot1, Screenshot2, Screenshot3, Screenshot4, Screenshot5, Screenshot6, Xproject } from "../../assets/index";
 
 interface ProjectsDataInterface {
   id: number;
   title: string;
   description: string;
-  src?: any;
+  src?: any | any[];
 }
 
 export const ProjectsData: ProjectsDataInterface[] = [
   {
     id: 1,
-    title: "SOCIAL MEDIA CLONE",
+    title: "Smart Esa",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!",
-    src: projectOne,
+      "Explore a comprehensive website illustrating effective strategies for company personnel to manage information and enhance user interface development",
+    src: [Screenshot1,Screenshot2,Screenshot3,Screenshot4,Screenshot5,Screenshot6]
   },
   {
     id: 2,
-    title: "E-commerce WebsiteE",
+    title: "Movie Platform",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!",
-    src: projectTwo,
+      "Our Movie Platform project is set to redefine how viewers experience cinema, offering a diverse catalog of films with intuitive navigation and personalized recommendations",
+    src: Xproject,
   },
   {
     id: 3,
-    title: "Chatting App",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!",
-    src: projectThree,
-  },
-  {
-    id: 4,
-    title: "SOCIAL MEDIA CLONE",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!",
-    src: projectTwo,
-  },
-  {
-    id: 5,
     title: "E-commerce WebsiteE",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!",
-    src: projectThree,
+      "Explore a curated selection and sell your future bike effortlessly on our specialized e-commerce site, dedicated to cycling enthusiasts worldwide.",
+    src: Xproject,
   },
-  {
-    id: 6,
-    title: "Chatting App",
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!",
-    src: projectOne,
-  },
+
 ];

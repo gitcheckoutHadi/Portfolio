@@ -22,7 +22,7 @@ Data:{
   id:number;
   title:string;
   subTitle:string;
-  result:string;
+  result?:string;
   des:string
 }[]
 }

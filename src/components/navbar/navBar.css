@@ -3,11 +3,25 @@
   gap: 1.25rem;
   align-items: center;
   margin-left: 1rem;
+ 
 
+
+}
+
+.ProfileCircle {
+  display: flex;
+position: relative;
+width: 4.3rem;
+height: 4.3rem;
+ background: linear-gradient(180deg, #2D3741 0%, #0E8388 100%);
+ border-radius: 50%;
+ padding: 0.2rem;
   img {
     border-radius: 50%;
     width: 4rem;
     height: 4rem;
     object-fit: cover;
+    border: 1.1px solid gray;
+    position: absolute;
   }
 }

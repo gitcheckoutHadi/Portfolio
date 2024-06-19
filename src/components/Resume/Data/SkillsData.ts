@@ -22,7 +22,7 @@ export const SkillsData:skillsInterface[] =[
       Grade:"100%",
     },
     {id:11,
-      title:"jquery",
+      title:"Tailwind CSS",
       Grade:"60%",
     },
     

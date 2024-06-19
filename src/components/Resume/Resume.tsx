@@ -18,7 +18,7 @@ const Resume = () => {
         <Title title="1+ YEARS OF EXPERIENCE" des="My Resume" />
       </div>
       <div>
-        <ul className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
+        <ul className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
           {ResumeData.map((val, index) => (
             <li
               key={val.id}
@@ -40,11 +40,9 @@ const Resume = () => {
         <Education />
       ) : SelectedIndex === 1 ? (
         <Skills />
-      ) : SelectedIndex === 2 ? (
-        <Experience />
       ) : (
-        <Achievement />
-      )}
+        <Experience />
+      ) }
     </section>
   );
 };
