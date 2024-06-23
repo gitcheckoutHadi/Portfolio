@@ -13,11 +13,11 @@ const LeftBanner = () => {
     <div className="w-full lgl:w-1/2 flex flex-col gap-20">
       <div className="flex flex-col gap-5">
         <h4 className=" text-lg font-normal">WELCOME TO MY WORLD</h4>
-        <h1 className="text-6xl font-bold text-white">
+        <h1 className="text-6xl font-bold ">
           Hi, I'm{" "}
           <span className="text-designColor capitalize">Hadi Shouman</span>
         </h1>
-        <h2 className="text-4xl font-bold text-white">
+        <h2 className="text-4xl font-bold ">
           a <span>{text}</span>
           <Cursor
             cursorBlinking={false}

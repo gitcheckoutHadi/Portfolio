@@ -25,9 +25,9 @@ export const Card: React.FC<CardProps> = ({ item }) => {
               {title}
             </h2>
             <p className="base">{des}</p>
-            <span className="text-2xl text-designColor">
+            {/* <span className="text-2xl text-designColor">
               <HiArrowRight />
-            </span>
+            </span> */}
           </div>
         </div>
       </div>

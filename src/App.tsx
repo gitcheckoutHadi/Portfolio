@@ -1,16 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "./components/navbar/Navbar";
 import Banner from "./components/banner/Banner";
 import Features from "./components/features/Features";
 import Projects from "./components/projects/Projects";
 import Resume from "./components/Resume/Resume";
-
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import FooterBottom from "./components/footer/FooterBottom";
-import Testimonial from "./components/tesimonial/Testimonial";
+import "./index.css"; // Ensure to import the updated CSS file
 
 function App() {
+  const themeMode = localStorage.getItem("theme") || "light";
+
+  useEffect(() => {
+    document.documentElement.classList.add(
+      themeMode === "light" ? "light-theme" : "dark-theme"
+    );
+  }, [themeMode]);
+
   return (
     <div className="w-full h-auto bg-bodyColor text-lightText px-4">
       <Navbar />
@@ -19,7 +26,6 @@ function App() {
         <Features />
         <Projects />
         <Resume />
-        {/* <Testimonial /> */}
         <Contact />
         <Footer />
         {/* <FooterBottom /> */}

@@ -17,11 +17,29 @@
   }
 
   .contactInput {
-    @apply w-full h-12 rounded-lg border-b-[1px] border-b-gray-600 bg-[#191b1e] text-lightText px-4 active:outline-none focus-visible:outline-designColor outline-none focus-visible:border-b-transparent duration-300
+    @apply w-full h-12 rounded-lg border-b-[1px] border-b-gray-600 bg-[#191b1e] text-lightText px-4 active:outline-none focus-visible:outline-designColor outline-none focus-visible:border-b-transparent duration-300;
   }
 
   .contactTextArea {
-    @apply w-full rounded-lg border-b-[1px] border-b-gray-600 bg-[#191b1e] text-lightText px-4 py-2 active:outline-none focus-visible:outline-designColor outline-none focus-visible:border-b-transparent duration-300 resize-none
+    @apply w-full rounded-lg border-b-[1px] border-b-gray-600 bg-[#191b1e] text-lightText px-4 py-2 active:outline-none focus-visible:outline-designColor outline-none focus-visible:border-b-transparent duration-300 resize-none;
+  }
+}
+
+@layer utilities {
+  .shadow-shadowOne {
+    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+  }
+
+  .light-theme {
+    --body-color: #f5f7f8;
+    --light-text: #000;
+    --box-bg: linear-gradient(145deg, #f0f0f0, #e0e0e0);
+  }
+
+  .dark-theme {
+    --body-color: #212428;
+    --light-text: #c4cfde;
+    --box-bg: linear-gradient(145deg, #183d3d, #93b1a6);
   }
 }
 
@@ -38,7 +56,7 @@
 }
 
 &::-webkit-scrollbar-thumb {
-  background-image: linear-gradient(180deg, #0E8388 0%, #1b3b2e 100%);
+  background-image: linear-gradient(180deg, #0e8388 0%, #1b3b2e 100%);
   border-radius: 0.625rem;
   box-shadow: -10px 0px 10px 0px rgba(0, 0, 0, 0.25);
 }

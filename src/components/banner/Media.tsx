@@ -5,6 +5,7 @@ import {
   FaLinkedinIn,
   FaReact,
   FaInstagram,
+  FaGithub,
 } from "react-icons/fa";
 import { SiTailwindcss, SiFigma, SiNextdotjs } from "react-icons/si";
 import { openNewWindow } from "../../utils/functions";
@@ -21,18 +22,13 @@ const Media = ({ ShowTile = true }: MediaInterface) => {
           </h2>
         )}
         <div className="flex gap-4">
-          <span
+          {/* <span
             className="bannerIcon"
             onClick={() => openNewWindow("www.facebook.com/hadi.shouman.5")}
           >
             <FaFacebookF />
-          </span>
-          <span
-            className="bannerIcon"
-            onClick={() => openNewWindow("www.instagram.com/shouman1998hadi/")}
-          >
-            <FaInstagram />
-          </span>
+          </span> */}
+
           <span
             className="bannerIcon"
             onClick={() =>
@@ -40,6 +36,12 @@ const Media = ({ ShowTile = true }: MediaInterface) => {
             }
           >
             <FaLinkedinIn />
+          </span>
+          <span
+            className="bannerIcon"
+            onClick={() => openNewWindow("https://github.com/gitcheckoutHadi")}
+          >
+            <FaGithub />
           </span>
         </div>
       </div>

@@ -3,12 +3,13 @@ import { logo } from "../../assets/index";
 import { navLinksData } from "../../constants";
 import { Link } from "react-scroll";
 import "./navBar.css";
+import ThemeSwitch from "../../elements/Inputs/SwichInput/SwichInput";
 const Navbar = () => {
   return (
     <div className="w-full h-24 sticky top-0 z-50 bg-bodyColor mx-auto flex justify-between items-center font-titleFont border-b-[1px] border-b-gray-600">
       <div className="ProfileContainer">
-      <div className="ProfileCircle">
-        <img src={logo} alt="logo" />
+        <div className="ProfileCircle">
+          <img src={logo} alt="logo" />
         </div>
         Hadi Shouman
       </div>
@@ -33,6 +34,7 @@ const Navbar = () => {
           ))}
         </ul>
       </div>
+      {/* <ThemeSwitch /> */}
     </div>
   );
 };
