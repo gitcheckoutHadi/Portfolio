@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   FaFacebookF,
   FaTwitter,
@@ -9,10 +9,12 @@ import {
 } from "react-icons/fa";
 import { SiTailwindcss, SiFigma, SiNextdotjs } from "react-icons/si";
 import { openNewWindow } from "../../utils/functions";
+import { themeMode } from "../../theme/Webtheme";
 interface MediaInterface {
   ShowTile?: boolean;
 }
 const Media = ({ ShowTile = true }: MediaInterface) => {
+  useEffect(() => {}, [themeMode]);
   return (
     <div className="flex flex-col xl:flex-row gap-6 lgl:gap-0 justify-between">
       <div>
@@ -30,7 +32,9 @@ const Media = ({ ShowTile = true }: MediaInterface) => {
           </span> */}
 
           <span
-            className="bannerIcon"
+            className={
+              themeMode === "light" ? "bannerIcon-light" : "bannerIcon-dark"
+            }
             onClick={() =>
               openNewWindow("linkedin.com/in/hadi-shouman-241066236/")
             }
@@ -38,7 +42,9 @@ const Media = ({ ShowTile = true }: MediaInterface) => {
             <FaLinkedinIn />
           </span>
           <span
-            className="bannerIcon"
+            className={
+              themeMode === "light" ? "bannerIcon-light" : "bannerIcon-dark"
+            }
             onClick={() => openNewWindow("https://github.com/gitcheckoutHadi")}
           >
             <FaGithub />

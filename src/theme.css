@@ -1,7 +1,7 @@
 /* theme.css */
 .light-theme {
   --body-color: #fff;
-  --light-text: #000; /* Adjust as needed for light theme */
+  --light-text: ; /* Adjust as needed for light theme */
   --box-bg: linear-gradient(145deg, #f0f0f0, #e0e0e0); /* Example */
 }
 

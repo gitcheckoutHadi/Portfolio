@@ -4,11 +4,20 @@ import { navLinksData } from "../../constants";
 import { Link } from "react-scroll";
 import "./navBar.css";
 import ThemeSwitch from "../../elements/Inputs/SwichInput/SwichInput";
+import { themeMode } from "../../theme/Webtheme";
 const Navbar = () => {
   return (
     <div className="w-full h-24 sticky top-0 z-50 bg-bodyColor mx-auto flex justify-between items-center font-titleFont border-b-[1px] border-b-gray-600">
       <div className="ProfileContainer">
-        <div className="ProfileCircle">
+        <div
+          className="ProfileCircle"
+          style={{
+            background:
+              themeMode === "light"
+                ? "linear-gradient(180deg, #b0b1b3 0%, #0E8388 100%)"
+                : "linear-gradient(180deg, #2D3741 0%, #0E8388 100%)",
+          }}
+        >
           <img src={logo} alt="logo" />
         </div>
         Hadi Shouman
@@ -34,7 +43,7 @@ const Navbar = () => {
           ))}
         </ul>
       </div>
-      {/* <ThemeSwitch /> */}
+      <ThemeSwitch />
     </div>
   );
 };

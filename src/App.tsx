@@ -8,10 +8,9 @@ import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import FooterBottom from "./components/footer/FooterBottom";
 import "./index.css"; // Ensure to import the updated CSS file
+import { themeMode } from "./theme/Webtheme";
 
 function App() {
-  const themeMode = localStorage.getItem("theme") || "light";
-
   useEffect(() => {
     document.documentElement.classList.add(
       themeMode === "light" ? "light-theme" : "dark-theme"
