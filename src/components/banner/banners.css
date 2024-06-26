@@ -1,0 +1,9 @@
+.RightBanner {
+  /* Default styles for .RightBanner */
+}
+
+@media screen and (max-width: 1020px) {
+  .RightBanner {
+    display: none;
+  }
+}
