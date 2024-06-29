@@ -1,4 +1,3 @@
-import { HiArrowRight } from "react-icons/hi";
 import { CardProps } from "../../utils/Interfaces";
 
 export const Card: React.FC<CardProps> = ({ item }) => {

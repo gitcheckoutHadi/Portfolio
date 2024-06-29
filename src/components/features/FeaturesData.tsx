@@ -1,16 +1,9 @@
 import { FeatureItemInterface } from "./featureInterface";
 import {
   AiFillApi,
-  AiFillAppstore,
   AiFillBug,
-  AiFillCloud,
   AiFillCode,
-  AiFillCodeSandboxCircle,
   AiFillDatabase,
-  AiFillMobile,
-  AiFillSecurityScan,
-  AiOutlineApi,
-  AiOutlineMobile,
 } from "react-icons/ai";
 import { FaMobile, FaGlobe } from "react-icons/fa";
 import { SiProgress, SiAntdesign } from "react-icons/si";

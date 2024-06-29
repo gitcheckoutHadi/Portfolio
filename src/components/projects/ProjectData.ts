@@ -1,4 +1,12 @@
-import { projectOne, projectTwo, projectThree, Screenshot1, Screenshot2, Screenshot3, Screenshot4, Screenshot5, Screenshot6, Xproject } from "../../assets/index";
+import {
+  Screenshot1,
+  Screenshot2,
+  Screenshot3,
+  Screenshot4,
+  Screenshot5,
+  Screenshot6,
+  Xproject,
+} from "../../assets/index";
 
 interface ProjectsDataInterface {
   id: number;
@@ -13,7 +21,14 @@ export const ProjectsData: ProjectsDataInterface[] = [
     title: "Smart Esa",
     description:
       "Explore a comprehensive website illustrating effective strategies for company personnel to manage information and enhance user interface development",
-    src: [Screenshot1,Screenshot2,Screenshot3,Screenshot4,Screenshot5,Screenshot6]
+    src: [
+      Screenshot1,
+      Screenshot2,
+      Screenshot3,
+      Screenshot4,
+      Screenshot5,
+      Screenshot6,
+    ],
   },
   {
     id: 2,
@@ -29,5 +44,4 @@ export const ProjectsData: ProjectsDataInterface[] = [
       "Explore a curated selection and sell your future bike effortlessly on our specialized e-commerce site, dedicated to cycling enthusiasts worldwide.",
     src: Xproject,
   },
-
 ];

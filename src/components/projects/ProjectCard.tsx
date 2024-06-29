@@ -1,6 +1,4 @@
 import React from "react";
-import { BsGithub } from "react-icons/bs";
-import { FaGlobe } from "react-icons/fa";
 import Slider, { Settings } from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

@@ -1,11 +1,4 @@
-import React from "react";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaLinkedinIn,
-  FaInstagram,
-  FaGithub,
-} from "react-icons/fa";
+import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { contactDark } from "../../assets/index";
 import { openNewWindow } from "../../utils/functions";
 

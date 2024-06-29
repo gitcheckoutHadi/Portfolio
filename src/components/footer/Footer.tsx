@@ -1,5 +1,3 @@
-import React from "react";
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { logo } from "../../assets/index";
 import Media from "../banner/Media";
 import { FooterData } from "../Resume/Data/FooterData";
@@ -13,22 +11,23 @@ const Footer = () => {
           <Media ShowTile={false} />
         </div>
       </div>
-      {FooterData.map((val,index) => (
+      {FooterData.map((val, index) => (
         <div key={index} className="w-full h-full">
-        <h3 className="text-xl uppercase text-designColor tracking-wider">
-          {val.title}
-        </h3>
-        <ul className="flex flex-col gap-4 font-titleFont font-medium py-6 overflow-hidden">
-          {val.data &&  val.data.map((text) => (
-             <li>
-             <span className="w-full text-lg relative hover:text-designColor duration-300 group cursor-pointer">
-               {text}
-               <span className="w-full h-[1px] bg-designColor inline-flex absolute left-0 -bottom-1 -translate-x-[100%] group-hover:translate-x-0 transition-transform duration-300"></span>
-             </span>
-           </li>
-          ))}
-        </ul>
-      </div>
+          <h3 className="text-xl uppercase text-designColor tracking-wider">
+            {val.title}
+          </h3>
+          <ul className="flex flex-col gap-4 font-titleFont font-medium py-6 overflow-hidden">
+            {val.data &&
+              val.data.map((text) => (
+                <li>
+                  <span className="w-full text-lg relative hover:text-designColor duration-300 group cursor-pointer">
+                    {text}
+                    <span className="w-full h-[1px] bg-designColor inline-flex absolute left-0 -bottom-1 -translate-x-[100%] group-hover:translate-x-0 transition-transform duration-300"></span>
+                  </span>
+                </li>
+              ))}
+          </ul>
+        </div>
       ))}
     </div>
   );

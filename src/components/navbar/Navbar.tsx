@@ -1,9 +1,7 @@
-import React from "react";
 import { logo } from "../../assets/index";
 import { navLinksData } from "../../constants";
 import { Link } from "react-scroll";
 import "./navBar.css";
-import ThemeSwitch from "../../elements/Inputs/SwichInput/SwichInput";
 const Navbar = () => {
   return (
     <div className="w-full h-24 sticky top-0 z-50 bg-bodyColor mx-auto flex justify-between items-center font-titleFont border-b-[1px] border-b-gray-600">

@@ -1,6 +1,4 @@
-import React from "react";
 import Title from "../layouts/Title";
-import { projectOne, projectTwo, projectThree } from "../../assets/index";
 import { ProjectsData } from "./ProjectData";
 import ProjectsCard from "./ProjectCard";
 
