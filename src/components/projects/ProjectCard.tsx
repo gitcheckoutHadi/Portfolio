@@ -11,7 +11,7 @@ interface ArrowProps {
   style?: React.CSSProperties;
   onClick?: () => void;
   currentSlide?: number;
-  slideCount?: number;
+  slideCount?: number; // Add slideCount to ArrowProps
 }
 
 // Custom next arrow component
@@ -62,6 +62,7 @@ const CustomPrevArrow: React.FC<ArrowProps> = ({
   style,
   onClick,
   currentSlide,
+  slideCount = 0, // Default to 0 if slideCount is undefined
 }) => {
   const isFirstSlide = currentSlide === 0;
 

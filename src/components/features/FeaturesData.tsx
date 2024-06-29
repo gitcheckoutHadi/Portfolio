@@ -5,8 +5,8 @@ import {
   AiFillCode,
   AiFillDatabase,
 } from "react-icons/ai";
-import { FaMobile, FaGlobe } from "react-icons/fa";
-import { SiProgress, SiAntdesign } from "react-icons/si";
+import { FaGlobe } from "react-icons/fa";
+import { SiAntdesign } from "react-icons/si";
 
 // Features Data
 export const featuresData: FeatureItemInterface[] = [
@@ -42,18 +42,7 @@ export const featuresData: FeatureItemInterface[] = [
     title: "Testing & Debugging",
     des: "Proficient in writing unit, integration, and end-to-end tests using tools like Jest, Mocha, and Selenium to ensure code quality.",
   },
-  // {
-  //   id: 7,
-  //   icon: <AiFillSecurityScan />,
-  //   title: "Cybersecurity",
-  //   des: "Knowledgeable in securing applications against common vulnerabilities and implementing best practices for data protection."
-  // },
-  // {
-  //   id: 8,
-  //   icon: <AiFillCodeSandboxCircle />,
-  //   title: "DevOps",
-  //   des: "Experience with CI/CD pipelines, containerization, and infrastructure as code using tools like Jenkins, Docker, and Terraform."
-  // },
+
   {
     id: 9,
     icon: <SiAntdesign />,
