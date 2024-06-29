@@ -6,8 +6,7 @@ import Projects from "./components/projects/Projects";
 import Resume from "./components/Resume/Resume";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
-import FooterBottom from "./components/footer/FooterBottom";
-import "./index.css"; // Ensure to import the updated CSS file
+import "./index.css";
 
 function App() {
   const themeMode = localStorage.getItem("theme") || "light";
@@ -28,7 +27,6 @@ function App() {
         <Resume />
         <Contact />
         <Footer />
-        {/* <FooterBottom /> */}
       </div>
     </div>
   );

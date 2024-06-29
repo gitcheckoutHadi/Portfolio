@@ -1,4 +1,3 @@
-import { color } from "framer-motion";
 import styled from "styled-components";
 
 export const TextInputContainer = styled.div`
@@ -15,7 +14,7 @@ export const Label = styled.label`
   width: 100%;
 `;
 
-export const Input = styled.input<{color?:string}>`
+export const Input = styled.input<{ color?: string }>`
   -webkit-appearance: none;
   appearance: none;
   width: 100%;
@@ -25,19 +24,19 @@ export const Input = styled.input<{color?:string}>`
   height: 56px;
   font-size: 16px;
   font-weight: 400;
-  background: #191B1E;
+  background: #191b1e;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3);
   color: white;
   transition: all 0.15s ease;
 
   &:hover {
     background: rgba(0, 0, 0, 0.04);
-    box-shadow: inset 0 -1px 0 #0E8388;
+    box-shadow: inset 0 -1px 0 #0e8388;
   }
 
   &:not(:placeholder-shown) + span {
     /* color: #0E8388 !important; */
-    color: ${props => props.color ||" #0E8388"} ;
+    color: ${(props) => props.color || " #0E8388"};
     transform: translate3d(0, -12px, 0) scale(0.75);
   }
 
@@ -47,21 +46,19 @@ export const Input = styled.input<{color?:string}>`
 
     /* color: #0E8388 !important; */
     & + span {
-  
       transform: translate3d(0, -12px, 0) scale(0.75);
-      color: #0E8388 !important;
+      color: #0e8388 !important;
     }
 
     & + span + .focus-bg {
       background: #007bff !important; /* Ensure the focus background is blue */
       transform: scaleX(1);
       transition: all 0.1s ease;
-      
     }
   }
 `;
 
-export const LabelText = styled.span<{color?:string}>`
+export const LabelText = styled.span<{ color?: string }>`
   position: absolute;
   top: 20px;
   left: 12px;
@@ -74,7 +71,7 @@ export const LabelText = styled.span<{color?:string}>`
   pointer-events: none;
   ////////////////////////////// question
   /* ww */
-  color: ${props => props.color || "#ffffff70"} ;
+  color: ${(props) => props.color || "#ffffff70"};
 `;
 
 export const FocusBg = styled.span`
@@ -89,4 +86,3 @@ export const FocusBg = styled.span`
   transform-origin: left;
   transition: all 0.1s ease; /* Ensure smooth transition */
 `;
-

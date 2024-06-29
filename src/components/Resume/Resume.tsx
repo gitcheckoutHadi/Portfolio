@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-
 import Education from "./Education";
 import Skills from "./Skills";
-import Achievement from "./Achievement";
 import Experience from "./Experience";
 import Title from "../layouts/Title";
 import { ResumeData } from "./ResumeData";
 
 const Resume = () => {
   const [SelectedIndex, setSelectedIndex] = useState<number>(0);
+
   const SaveItemIndex = (index: number) => {
     setSelectedIndex(index);
   };
+
   return (
     <section id="resume" className="w-full py-20 border-b-[1px] border-b-black">
       <div className="flex justify-center items-center text-center">
@@ -22,9 +22,7 @@ const Resume = () => {
           {ResumeData.map((val, index) => (
             <li
               key={val.id}
-              onClick={() => {
-                SaveItemIndex(index);
-              }}
+              onClick={() => SaveItemIndex(index)}
               className={`${
                 SelectedIndex === index
                   ? "border-designColor rounded-lg"
@@ -42,7 +40,7 @@ const Resume = () => {
         <Skills />
       ) : (
         <Experience />
-      ) }
+      )}
     </section>
   );
 };
