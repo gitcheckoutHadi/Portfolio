@@ -5,25 +5,18 @@ import "slick-carousel/slick/slick-theme.css";
 import { CardProps } from "../../utils/Interfaces";
 import "./projects.css";
 
-// Define the ArrowProps interface
 interface ArrowProps {
   className?: string;
   style?: React.CSSProperties;
   onClick?: () => void;
   currentSlide?: number;
-  slideCount?: number; // Add slideCount to ArrowProps
 }
 
-// Custom next arrow component
 const CustomNextArrow: React.FC<ArrowProps> = ({
   className,
   style,
   onClick,
-  currentSlide,
-  slideCount = 0, // Default to 0 if slideCount is undefined
 }) => {
-  const isLastSlide = currentSlide === slideCount - 1;
-
   return (
     <div
       className={className}
@@ -32,7 +25,7 @@ const CustomNextArrow: React.FC<ArrowProps> = ({
         display: "block",
         right: 10,
         zIndex: 2,
-        color: isLastSlide ? "gray" : "#0E8388",
+        color: "#0E8388",
       }}
       onClick={onClick}
     >
@@ -56,16 +49,11 @@ const CustomNextArrow: React.FC<ArrowProps> = ({
   );
 };
 
-// Custom previous arrow component
 const CustomPrevArrow: React.FC<ArrowProps> = ({
   className,
   style,
   onClick,
-  currentSlide,
-  slideCount = 0, // Default to 0 if slideCount is undefined
 }) => {
-  const isFirstSlide = currentSlide === 0;
-
   return (
     <div
       className={className}
@@ -75,7 +63,7 @@ const CustomPrevArrow: React.FC<ArrowProps> = ({
         left: 10,
         zIndex: 2,
         transform: "rotate(180deg)",
-        color: isFirstSlide ? "gray" : "#0E8388",
+        color: "#0E8388",
       }}
       onClick={onClick}
     >
@@ -99,11 +87,9 @@ const CustomPrevArrow: React.FC<ArrowProps> = ({
   );
 };
 
-// Project card component
 const ProjectsCard: React.FC<CardProps> = ({ item }) => {
   const { title, des, src, key } = item;
 
-  // Slider settings
   const settings: Settings = {
     dots: true,
     infinite: true,
@@ -111,7 +97,7 @@ const ProjectsCard: React.FC<CardProps> = ({ item }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000, // 3 seconds per image
+    autoplaySpeed: 3000,
     arrows: true,
     nextArrow: <CustomNextArrow />,
     prevArrow: <CustomPrevArrow />,
@@ -138,7 +124,7 @@ const ProjectsCard: React.FC<CardProps> = ({ item }) => {
                 <img
                   className="w-full h-60 object-cover group-hover:scale-110 duration-300 cursor-pointer"
                   src={image}
-                  alt={`Project ${title} Image ${index + 1}`}
+                  alt={`Project ${title} ${index + 1}`}
                 />
               </div>
             ))}
@@ -157,14 +143,6 @@ const ProjectsCard: React.FC<CardProps> = ({ item }) => {
             <h3 className="text-base uppercase text-designColor font-normal">
               {title}
             </h3>
-            {/* <div className="flex gap-2">
-              <span className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer">
-                <BsGithub />
-              </span>
-              <span className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer">
-                <FaGlobe />
-              </span>
-            </div> */}
           </div>
           <p className="text-sm tracking-wide mt-3 hover:text-gray-100 duration-300">
             {des}
