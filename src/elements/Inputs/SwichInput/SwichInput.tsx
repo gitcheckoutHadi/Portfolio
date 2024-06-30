@@ -3,7 +3,7 @@ import "./SwichInput.css";
 
 const ThemeSwitch: React.FC = () => {
   const [theme, setTheme] = useState<string>(
-    localStorage.getItem("theme") || "light"
+    localStorage.getItem("theme") || "dark"
   );
 
   useEffect(() => {

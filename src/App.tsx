@@ -9,7 +9,7 @@ import Footer from "./components/footer/Footer";
 import "./index.css";
 
 function App() {
-  const themeMode = localStorage.getItem("theme") || "light";
+  const themeMode = localStorage.getItem("theme") || "dark";
 
   useEffect(() => {
     document.documentElement.classList.add(
