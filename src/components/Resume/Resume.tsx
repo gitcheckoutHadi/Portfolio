@@ -4,6 +4,7 @@ import Skills from "./Skills";
 import Experience from "./Experience";
 import Title from "../layouts/Title";
 import { ResumeData } from "./ResumeData";
+import { themeMode } from "../../theme/Webtheme";
 
 const Resume = () => {
   const [SelectedIndex, setSelectedIndex] = useState<number>(0);
@@ -25,9 +26,9 @@ const Resume = () => {
               onClick={() => SaveItemIndex(index)}
               className={`${
                 SelectedIndex === index
-                  ? "border-designColor rounded-lg"
+                  ? "border-designColor"
                   : "border-transparent"
-              } resumeLi`}
+              } ${themeMode === "dark" ? "resumeLi-dark" : "resumeLi-light"} `}
             >
               {val.text}
             </li>

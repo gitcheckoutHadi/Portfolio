@@ -1,19 +1,43 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./SwichInput.css";
+import { themeMode } from "../../../theme/Webtheme";
 
 const ThemeSwitch: React.FC = () => {
-  const [theme, setTheme] = useState<string>(
-    localStorage.getItem("theme") || "dark"
-  );
-
   useEffect(() => {
-    document.documentElement.classList.toggle("light-theme", theme === "dark");
-    document.documentElement.classList.toggle("dark-theme", theme === "light");
-    localStorage.setItem("theme", theme);
-  }, [theme]);
+    const currentTheme = themeMode;
+    document.documentElement.classList.toggle(
+      "light-theme",
+      currentTheme === "light"
+    );
+    document.documentElement.classList.toggle(
+      "dark-theme",
+      currentTheme === "dark"
+    );
+    localStorage.setItem("theme", currentTheme);
+    // Set initial checkbox state based on the current theme
+    const checkbox = document.querySelector(
+      ".theme-switch__checkbox"
+    ) as HTMLInputElement;
+    if (checkbox) {
+      checkbox.checked = currentTheme === "dark";
+    }
+  }, []);
 
   const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+    const currentTheme = localStorage.getItem("theme") || themeMode;
+    const newTheme = currentTheme === "light" ? "dark" : "light";
+    document.documentElement.classList.toggle(
+      "light-theme",
+      newTheme === "light"
+    );
+    document.documentElement.classList.toggle(
+      "dark-theme",
+      newTheme === "dark"
+    );
+    localStorage.setItem("theme", newTheme);
+    console.log("global theme is ", newTheme);
+
+    // window.location.reload();
   };
 
   return (
@@ -21,7 +45,6 @@ const ThemeSwitch: React.FC = () => {
       <input
         type="checkbox"
         className="theme-switch__checkbox"
-        checked={theme === "dark"}
         onChange={toggleTheme}
       />
       <div className="theme-switch__container">

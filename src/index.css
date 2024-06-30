@@ -4,47 +4,94 @@
 @tailwind utilities;
 
 @layer components {
-  .bannerIcon {
-    @apply w-16 h-16 bg-black bg-opacity-25 text-gray-200 text-xl inline-flex items-center justify-center rounded-md shadow-shadowOne hover:bg-opacity-40 hover:-translate-y-1 transition-all hover:text-designColor cursor-pointer duration-300;
+  /* Dark theme bannerIcon */
+  .bannerIcon-dark {
+    @apply w-16 h-16 bg-black bg-opacity-25 text-gray-200 text-xl 
+    inline-flex items-center justify-center rounded-md 
+    hover:bg-opacity-40 hover:-translate-y-1 transition-all hover:text-designColor cursor-pointer duration-300;
   }
 
-  .resumeLi {
-    @apply w-full h-20 bg-black bg-opacity-25 text-xl text-gray-300 flex justify-center cursor-pointer hover:bg-opacity-40 duration-300 items-center border-[1px] rounded-none;
+  /* Light theme bannerIcon */
+  .bannerIcon-light {
+    @apply w-16 h-16 bg-white bg-opacity-25 text-gray-800 text-xl 
+    inline-flex items-center justify-center rounded-md 
+    hover:bg-opacity-40 hover:-translate-y-1 transition-all hover:text-designColor cursor-pointer duration-300;
   }
 
-  .bgOpacity {
+  /* Dark theme resumeLi */
+  .resumeLi-dark {
+    @apply w-full h-20 bg-black bg-opacity-25 text-xl text-gray-300 
+    flex justify-center cursor-pointer hover:bg-opacity-40 duration-300 
+    items-center border-[1px] rounded-none;
+  }
+
+  /* Light theme resumeLi */
+  .resumeLi-light {
+    @apply w-full h-20 bg-white bg-opacity-25 text-xl text-gray-800 
+    flex justify-center cursor-pointer hover:bg-opacity-40 duration-300 
+    items-center border-[1px] rounded-none shadow-shadowOneLight;
+  }
+
+  /* Dark theme bgOpacity */
+  .bgOpacity-dark {
     @apply bg-black bg-opacity-40;
   }
 
-  .contactInput {
+  /* Light theme bgOpacity */
+  .bgOpacity-light {
+    @apply bg-white bg-opacity-40;
+  }
+
+  /* Dark theme contactInput */
+  .contactInput-dark {
     @apply w-full h-12 rounded-lg border-b-[1px] border-b-gray-600 bg-[#191b1e] text-lightText px-4 active:outline-none focus-visible:outline-designColor outline-none focus-visible:border-b-transparent duration-300;
   }
 
-  .contactTextArea {
+  /* Light theme contactInput */
+  .contactInput-light {
+    @apply w-full h-12 rounded-lg border-b-[1px] border-b-gray-400 bg-white text-darkText px-4 active:outline-none focus-visible:outline-designColor outline-none focus-visible:border-b-transparent duration-300;
+  }
+
+  /* Dark theme contactTextArea */
+  .contactTextArea-dark {
     @apply w-full rounded-lg border-b-[1px] border-b-gray-600 bg-[#191b1e] text-lightText px-4 py-2 active:outline-none focus-visible:outline-designColor outline-none focus-visible:border-b-transparent duration-300 resize-none;
+  }
+
+  /* Light theme contactTextArea */
+  .contactTextArea-light {
+    @apply w-full rounded-lg border-b-[1px] border-b-gray-400 bg-white text-darkText px-4 py-2 active:outline-none focus-visible:outline-designColor outline-none focus-visible:border-b-transparent duration-300 resize-none;
   }
 }
 
 @layer utilities {
+  /* Shadow for dark theme */
   .shadow-shadowOne {
     box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
   }
 
+  /* Shadow for light theme */
+  .shadow-shadowOneLight {
+    box-shadow: 10px 10px 19px #e0e0e0, -10px -10px 19px #f0f0f0;
+  }
+
+  /* Light theme variables */
   .light-theme {
     --body-color: #f5f7f8;
     --light-text: #000;
     --box-bg: linear-gradient(145deg, #f0f0f0, #e0e0e0);
+    /* --box-Shadow: 10px 10px 19px #a0a2a5, -10px -10px 19px #a2bad2; */
   }
 
+  /* Dark theme variables */
   .dark-theme {
     --body-color: #212428;
     --light-text: #c4cfde;
     --box-bg: linear-gradient(145deg, #183d3d, #93b1a6);
+    /* --box-Shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e; */
   }
 }
 
 .active {
-  /* go */
   color: white;
 }
 

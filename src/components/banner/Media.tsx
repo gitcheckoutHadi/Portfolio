@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { openNewWindow } from "../../utils/functions";
+import { themeMode } from "../../theme/Webtheme";
+import { BannerBox } from "../../theme.style";
 
 interface MediaInterface {
   ShowTile?: boolean;
 }
 
 const Media = ({ ShowTile = true }: MediaInterface) => {
+  const [currentTheme, setCurrentTheme] = useState<string>(themeMode);
+
+  useEffect(() => {
+    setCurrentTheme(themeMode);
+    console.log(`bannerIcon-${currentTheme}`);
+    // alert(`bannerIcon-${currentTheme}`);
+  }, [themeMode]);
+
   return (
     <div className="flex flex-col xl:flex-row gap-6 lgl:gap-0 justify-between">
       <div>
@@ -16,16 +26,16 @@ const Media = ({ ShowTile = true }: MediaInterface) => {
           </h2>
         )}
         <div className="flex gap-4">
-          <span
-            className="bannerIcon"
+          <BannerBox
+            theme={themeMode}
             onClick={() =>
-              openNewWindow("linkedin.com/in/hadi-shouman-241066236/")
+              openNewWindow("https://linkedin.com/in/hadi-shouman-241066236/")
             }
           >
             <FaLinkedinIn />
-          </span>
+          </BannerBox>
           <span
-            className="bannerIcon"
+            className={`bannerIcon-${currentTheme}`}
             onClick={() => openNewWindow("https://github.com/gitcheckoutHadi")}
           >
             <FaGithub />

@@ -10,12 +10,21 @@ import "./index.css";
 
 function App() {
   const themeMode = localStorage.getItem("theme") || "dark";
-
   useEffect(() => {
     document.documentElement.classList.add(
       themeMode === "light" ? "light-theme" : "dark-theme"
     );
-  }, [themeMode]);
+  }, []);
+
+  // useEffect(() => {
+  //   if (theme === "dark") {
+  //     document.body.classList.remove("light-mode");
+  //     document.body.classList.add("dark-mode");
+  //   } else {
+  //     document.body.classList.remove("dark-mode");
+  //     document.body.classList.add("light-mode");
+  //   }
+  // }, [theme]);
 
   return (
     <div className="w-full h-auto bg-bodyColor text-lightText px-4">

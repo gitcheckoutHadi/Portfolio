@@ -20,11 +20,12 @@ module.exports = {
       colors: {
         bodyColor: "var(--body-color)",
         lightText: "var(--light-text)",
-        boxBg: "var(--box-bg)",
+        boxBg: "var(--box-Shadow)",
         designColor: "#0E8388",
       },
       boxShadow: {
         shadowOne: "10px 10px 19px #1c1e22, -10px -10px 19px #262a2e",
+        shadowOneLight: "10px 10px 19px #e0e0e0, -10px -10px 19px #f0f0f0",
       },
     },
   },
