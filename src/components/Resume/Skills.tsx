@@ -37,7 +37,9 @@ const Skills = () => {
             <p className="text-sm text-designColor tracking-[4px] uppercase">
               {val.Features}
             </p>
-            <h2 className={`${IndexMargin(index)} text-3xl md:text-4xl font-bold`}>
+            <h2
+              className={`${IndexMargin(index)} text-3xl md:text-4xl font-bold`}
+            >
               {val.MainTitle}
             </h2>
           </div>
