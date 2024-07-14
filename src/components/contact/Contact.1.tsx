@@ -5,7 +5,7 @@ import TextInput from "../../elements/Inputs/TextInputs/TextInput";
 import TextArea from "../../elements/Inputs/TextArea/TextArea";
 import emailjs from "@emailjs/browser";
 
-const Contact = () => {
+export const Contact = () => {
   const [username, setUsername] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [email, setEmail] = useState("");
@@ -45,36 +45,32 @@ const Contact = () => {
       );
       setErrMsg("");
 
-      if (form.current) {
-        // Send email using EmailJS
-        emailjs
-          .sendForm(
-            "service_r01u1w5",
-            "template_m1g8s3o",
-            form.current,
-            "YGWMJowcZPdnnw26B"
-          )
-          .then(
-            (response) => {
-              console.log(
-                "Email successfully sent!",
-                response.status,
-                response.text
-              );
-            },
-            (err) => {
-              console.log("Failed to send email. Error: ", err);
-            }
-          );
+      // Send email using EmailJS
+      emailjs
+        .sendForm(
+          "service_r01u1w5",
+          "template_m1g8s3o",
+          form.current,
+          "YGWMJowcZPdnnw26B"
+        )
+        .then(
+          (response) => {
+            console.log(
+              "Email successfully sent!",
+              response.status,
+              response.text
+            );
+          },
+          (err) => {
+            console.log("Failed to send email. Error: ", err);
+          }
+        );
 
-        setUsername("");
-        setPhoneNumber("");
-        setEmail("");
-        setSubject("");
-        setMessage("");
-      } else {
-        setErrMsg("Failed to send email. Form reference is null.");
-      }
+      setUsername("");
+      setPhoneNumber("");
+      setEmail("");
+      setSubject("");
+      setMessage("");
     }
   };
 
@@ -187,5 +183,3 @@ const Contact = () => {
     </section>
   );
 };
-
-export default Contact;
