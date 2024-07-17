@@ -125,7 +125,8 @@ const Contact = () => {
                 <div className="w-full lgl:w-1/2 flex flex-col gap-4">
                   <TextInput
                     id="PHNUM"
-                    text="Phone Number"
+                    name="to_name"
+                    text="phoneNb"
                     value={phoneNumber}
                     error={errPhoneNumber}
                     onChange={(e) => {
@@ -139,6 +140,7 @@ const Contact = () => {
                 <TextInput
                   id="UAcount"
                   text="Email"
+                  name="Email"
                   value={email}
                   error={errEmail}
                   onChange={(e) => {
@@ -150,7 +152,7 @@ const Contact = () => {
               <div className="flex flex-col gap-4">
                 <TextInput
                   id="HOOODDSAD"
-                  name="from_name"
+                  name="Subject"
                   text="Subject"
                   value={subject}
                   error={errSubject}
