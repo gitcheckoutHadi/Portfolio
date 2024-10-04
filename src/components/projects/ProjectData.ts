@@ -1,4 +1,7 @@
 import {
+  Bikes,
+  Bikes0,
+  Bikes1,
   Screenshot1,
   Screenshot2,
   Screenshot3,
@@ -20,7 +23,7 @@ export const ProjectsData: ProjectsDataInterface[] = [
     id: 1,
     title: "Smart Esa",
     description:
-      "Explore a comprehensive website illustrating effective strategies for company personnel to manage information and enhance user interface development",
+      "I worked on a project that makes every web element customizable via an admin panel, connected to JSON for data management. I handled all details, both small and large",
     src: [
       Screenshot1,
       Screenshot2,
@@ -34,14 +37,14 @@ export const ProjectsData: ProjectsDataInterface[] = [
     id: 2,
     title: "Movie Platform",
     description:
-      "Our Movie Platform project is set to redefine how viewers experience cinema, offering a diverse catalog of films with intuitive navigation and personalized recommendations",
+      "I manage the CRUD operations for all personnel involved in the movie, including actors and directors, and track their contributions projects",
     src: Xproject,
   },
   {
     id: 3,
     title: "E-commerce WebsiteE",
     description:
-      "Explore a curated selection and sell your future bike effortlessly on our specialized e-commerce site, dedicated to cycling enthusiasts worldwide.",
-    src: Xproject,
+      "I am responsible for delivering a bike search feature that matches users' preferences, utilizing PHP, HTML, CSS, and JavaScript as a full-stack developer",
+    src: [Bikes, Bikes0, Bikes1],
   },
 ];

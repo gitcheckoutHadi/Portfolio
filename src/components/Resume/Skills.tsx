@@ -17,6 +17,8 @@ const Skills = () => {
         return "w-[65%]";
       case "60%":
         return "w-[60%]";
+      case "50%":
+        return "w-[50%]";
       default:
         return "w-0"; // or handle as needed
     }

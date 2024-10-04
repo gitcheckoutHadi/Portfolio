@@ -1,6 +1,6 @@
 import React from "react";
 import LeftBanner from "./LeftBanner";
-import RightBanner from "./RightBanner";
+
 import "./banners.css";
 const Banner = () => {
   return (
@@ -10,7 +10,7 @@ const Banner = () => {
     >
       <LeftBanner />
       {/* <div className="RightBanner"> */}
-      <RightBanner />
+      {/* <RightBanner /> */}
       {/* </div> */}
     </section>
   );

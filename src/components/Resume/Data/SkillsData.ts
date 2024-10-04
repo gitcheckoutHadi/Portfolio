@@ -10,7 +10,8 @@ export const SkillsData: skillsInterface[] = [
       { id: 2, title: "Html, CSS", Grade: "100%" },
       { id: 12, title: "JavaScript, TypeScript", Grade: "90%" },
       { id: 3, title: "styled Component", Grade: "100%" },
-      { id: 11, title: "Tailwind CSS", Grade: "60%" },
+      { id: 11, title: "Tailwind CSS", Grade: "70%" },
+      { id: 2, title: "React Native", Grade: "50%" },
     ],
   },
 
