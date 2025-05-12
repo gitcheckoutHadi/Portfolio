@@ -4,28 +4,24 @@ export const ExperienceData: ResumeCardProps[] = [
   {
     mainId: 1,
     MainTitle: "Job Experience",
-    Date: "2010 - 2022",
+    Date: "2023 - Present",
     Data: [
       {
         id: 1,
+        title: "Ektolife",
+        subTitle: "IVF Treatments",
+        link: "https://dev.d274ehw9c7femt.amplifyapp.com/clinic/",
+
+        des: "Ektolife is an IVF Treatment app designed to support individuals and couples through their fertility journey. It offers features such as medication tracking, cycle monitoring, appointment scheduling, and secure communication with healthcare providers. Ektolife works on simplifying and personalizing the IVF process, making it easier to manage every stage of treatment with confidence and clarity.",
+      },
+
+      {
+        id: 2,
         title: "Zidyia",
         subTitle: "LMS Platform",
         // result: "3.90/4",
         des: "At Zidyia, I was responsible for converting design files from Figma into responsive web pages using React. Additionally, I integrated these front-end pages with the backend through API connections, ensuring a seamless and functional user experience.",
       },
-
-      // {id:2,
-      //   title:"Sr. Software Engineer",
-      //   subTitle:"Apple Developer Team - (2012 - 2016)",
-      //   result:"3.90/4",
-      //   des:"The training provided by universities in order to prepare people to work in various sectors of the economy or areas of culture."
-      // },
-      // {id:3,
-      //   title:"Sr. Software Engineer",
-      //   subTitle:"University of DVI (2006 - 2010)",
-      //   result:"3.90/4",
-      //   des:"The training provided by universities in order to prepare people to work in various sectors of the economy or areas of culture."
-      // }
     ],
   },
   {

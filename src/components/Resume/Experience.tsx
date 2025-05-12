@@ -27,14 +27,6 @@ const Education = () => {
                 />
               ))}
             {/* <ResumeCard item={item} key={item.id} /> */}
-            {/* <ResumeCard
-                  item={{
-                    title: item.title,
-                    subTitle: item.subTitle,
-                    result: item.result,
-                    des: item.des,
-                  }}
-                /> */}
           </div>
         </div>
       ))}

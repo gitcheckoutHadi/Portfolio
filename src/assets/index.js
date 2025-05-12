@@ -16,9 +16,11 @@ import Bikes from "./images/projects/Bikes.png";
 import Bikes0 from "./images/projects/Bikes0.png";
 import Bikes1 from "./images/projects/Bikes1.png";
 import Xproject from "./images/projects/x.png";
+import Explore from "./images/explore.png";
 export {
   logo,
   bannerImg,
+  Explore,
   Bikes,
   Bikes0,
   Bikes1,
